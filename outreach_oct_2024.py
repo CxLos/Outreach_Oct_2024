@@ -1,24 +1,13 @@
 # =================================== IMPORTS ================================= #
-import csv, sqlite3
-import numpy as np 
+
 import pandas as pd 
-import seaborn as sns 
-import matplotlib.pyplot as plt 
-import plotly.figure_factory as ff
-import plotly.graph_objects as go
-from geopy.geocoders import Nominatim
-from folium.plugins import MousePosition
 import plotly.express as px
-import datetime
-import folium
 import os
-import sys
+import plotly.graph_objects as go
 import dash
 from dash import dcc, html
-from dash.dependencies import Input, Output, State
-from dash.development.base_component import Component
-# 'data/~$bmhc_data_2024_cleaned.xlsx'
 # print('System Version:', sys.version)
+
 # -------------------------------------- DATA ------------------------------------------- #
 
 current_dir = os.getcwd()
@@ -504,24 +493,6 @@ if __name__ == '__main__':
 
 # Set buildpack for heroku
 # heroku buildpacks:set heroku/python
-
-# Heatmap Colorscale colors -----------------------------------------------------------------------------
-
-#   ['aggrnyl', 'agsunset', 'algae', 'amp', 'armyrose', 'balance',
-            #  'blackbody', 'bluered', 'blues', 'blugrn', 'bluyl', 'brbg',
-            #  'brwnyl', 'bugn', 'bupu', 'burg', 'burgyl', 'cividis', 'curl',
-            #  'darkmint', 'deep', 'delta', 'dense', 'earth', 'edge', 'electric',
-            #  'emrld', 'fall', 'geyser', 'gnbu', 'gray', 'greens', 'greys',
-            #  'haline', 'hot', 'hsv', 'ice', 'icefire', 'inferno', 'jet',
-            #  'magenta', 'magma', 'matter', 'mint', 'mrybm', 'mygbm', 'oranges',
-            #  'orrd', 'oryel', 'oxy', 'peach', 'phase', 'picnic', 'pinkyl',
-            #  'piyg', 'plasma', 'plotly3', 'portland', 'prgn', 'pubu', 'pubugn',
-            #  'puor', 'purd', 'purp', 'purples', 'purpor', 'rainbow', 'rdbu',
-            #  'rdgy', 'rdpu', 'rdylbu', 'rdylgn', 'redor', 'reds', 'solar',
-            #  'spectral', 'speed', 'sunset', 'sunsetdark', 'teal', 'tealgrn',
-            #  'tealrose', 'tempo', 'temps', 'thermal', 'tropic', 'turbid',
-            #  'turbo', 'twilight', 'viridis', 'ylgn', 'ylgnbu', 'ylorbr',
-            #  'ylorrd'].
 
 # rm -rf ~$bmhc_data_2024_cleaned.xlsx
 # rm -rf ~$bmhc_data_2024.xlsx
