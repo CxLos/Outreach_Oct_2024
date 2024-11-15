@@ -10,15 +10,7 @@
   margin: 5px 0px 0px 0px;
   text-align: center;
   color: cadetblue;
-  font-size: 45px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.count {
-  margin: 120px 0px 0px 0px;
-  text-align: center;
-  color: rgb(84, 84, 84);
-  font-size: 80px;
+  font-size: 55px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -52,39 +44,6 @@
   justify-content: center;
   text-align: center;
   border-bottom: 2px solid rgb(186, 186, 186);
-}
-
-.row00 {
-  margin:0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.row1 {
-  margin:20px 0px 0px 10px;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-}
-.row2 {
-  margin:0px 0px 0px 10px;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-}
-
-.row3 {
-  margin:0px 20px 0px 20px;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  /* border-top: 2px solid rgb(186, 186, 186); */
 }
 
 .highlights {
@@ -193,83 +152,4 @@
 .scrollable-container {
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks */
-}
-
-.graph1 {
-  border-right: 2px solid rgb(186, 186, 186);
-  border-bottom: 2px solid rgb(186, 186, 186);
-  margin: 0px;
-  padding: 10px 20px 0px 0px;
-  width: 48%;
-}
-
-.graph2 {
-  /* border-left: 2px solid gray; */
-  border-bottom: 2px solid rgb(186, 186, 186);
-  margin: 0px;
-  padding: 10px 0px 0px 30px;
-  width: 48%;
-}
-
-.graph3 {
-  /* border-top: 2px solid gray; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-right: 2px solid rgb(186, 186, 186);
-  border-bottom: 2px solid rgb(186, 186, 186);
-  margin: 0px;
-  padding: 10px 20px 0px 0px;
-  width: 48%;
-}
-
-.graph4 {
-  /* border-top: 2px solid gray; */
-  /* border-left: 2px solid gray; */
-  border-bottom: 2px solid rgb(186, 186, 186);
-  margin: 0px;
-  padding: 10px 0px 0px 30px;
-  width: 48%;
-}
-
-.graph5 {
-  /* border-top: 2px solid gray; */
-  /* border-left: 2px solid gray; */
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-  width: 95%;
-}
-
-.graph7 {
-  /* border-top: 2px solid gray; */
-  /* border-left: 2px solid gray; */
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-  width: 48%;
-}
-
-.folium {
-  border: 2px solid;
-  border-color: rgb(186, 186, 186);
-  width: 90%;
-  height: 800px;
-  margin: 0px 0px 50px 0px;
-  padding: 0px 0px 0px 0px;
-}
-
-.zip {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-}
-
-.type-input {
-  /* display: flex;
-  align-self: center;
-  align-content:center;
-  align-items: center; */
-  width:20vw;
-  /* height: auto; */
-  font-size: 20px;
-  font-family: 'Calibri';
 }

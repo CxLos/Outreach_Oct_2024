@@ -117,12 +117,29 @@ color_sequence = px.colors.qualitative.Plotly
 # Datafram where column 'Which outreach event are you reporting on?' is equal to 'Care Coordination Scheduling'
 df_care = df[df['Which outreach event are you reporting on?'] == 'Care Coordination Scheduling']
 
+# Include all columns except 'Timestamp'
+care_columns = [
+    'Which outreach event are you reporting on?',
+    'Date:',
+    'Event Name', 
+    'Partner Name:', 
+    'Discussion Purpose', 
+    'Defined Outcome',
+    'Number of Appointments Scheduled:',
+    'Primary Care Type:',
+    'SDoH Service Type',
+    'Number of MAP applications',
+    'Number of SDoH services coordinated',
+    'Number of health checks rendered'
+]
+
+df_care_filtered = df_care[care_columns]
+
 # Datafram where column 'Which outreach event are you reporting on?' is equal to 'Community Outreach Event'
 df_community = df[df['Which outreach event are you reporting on?'] == 'Community Outreach Event']
 
 # List of columns to include
 community_columns = [
-    'Timestamp', 
     'Which outreach event are you reporting on?', 
     'Date:',
     'Event Name', 
@@ -139,7 +156,6 @@ df_community_filtered = df_community[community_columns]
 df_partnership = df[df['Which outreach event are you reporting on?'] == 'Partnership Engagement Meeting']
 
 partnership_columns = [
-    'Timestamp', 
     'Which outreach event are you reporting on?', 
     'Date:',
     'Event Name', 
@@ -156,7 +172,7 @@ df_partnership_filtered = df_partnership[partnership_columns]
 care_coordination_table = go.Figure(data=[go.Table(
     # columnwidth=[50, 50, 50],  # Adjust the width of the columns
     header=dict(
-        values=list(df_care.columns),
+        values=list(df_care_filtered.columns),
         fill_color='paleturquoise',
         align='center',
         height=30,  # Adjust the height of the header cells
@@ -164,7 +180,7 @@ care_coordination_table = go.Figure(data=[go.Table(
         font=dict(size=12)  # Adjust font size
     ),
     cells=dict(
-        values=[df_care[col] for col in df_care.columns],
+        values=[df_care_filtered[col] for col in df_care_filtered.columns],
         fill_color='lavender',
         align='left',
         height=25,  # Adjust the height of the cells
@@ -448,7 +464,7 @@ if __name__ == '__main__':
 # ---------------------------------------------- Host Application -------------------------------------------
 
 # 1. pip freeze > requirements.txt
-# 2. add this to procfile: 'web: gunicorn impact_11_2024:server'
+# 2. add this to procfile: 'web: gunicorn outreach_oct_2024:server'
 # 3. heroku login
 # 4. heroku create
 # 5. git push heroku main
@@ -478,13 +494,13 @@ if __name__ == '__main__':
 
 # Heroku Setup:
 # heroku login
-# heroku create mc-oct-2024
-# heroku git:remote -a mc-oct-2024
+# heroku create outreach-oct-2024
+# heroku git:remote -a outreach-oct-2024
 # git push heroku main
 
 # Clear Heroku Cache:
 # heroku plugins:install heroku-repo
-# heroku repo:purge_cache -a mc-oct-2024
+# heroku repo:purge_cache -a outreach-oct-2024
 
 # Set buildpack for heroku
 # heroku buildpacks:set heroku/python
